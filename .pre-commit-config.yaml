@@ -1,0 +1,20 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: "v8.35.0"
+    hooks:
+      - id: eslint
+        additional_dependencies:
+          - eslint@^8.45.0
+          - typescript@4.7.4
+          - "@typescript-eslint/eslint-plugin@^6.0.0"
+          - "@typescript-eslint/parser@^6.0.0"
+          - eslint-plugin-react-refresh@^0.4.3
+          - eslint-plugin-react-hooks@^4.6.0
+        files: \.([jt]sx?)$ # *.js, *.jsx, *.ts, *.tsx
+        types: [file]

@@ -18,7 +18,7 @@ export default function Post({ user, body, assets }: { user: User, body: string,
                 {body}
             </div>
             <div className="h-[60px] flex gap-4">
-                {assets.map((asset) => <Thumbnail key={asset.thumbnail} thumbnail={asset.thumbnail} />)}
+                {assets.map((asset) => <Thumbnail key={asset.thumbnail} thumbnail={asset.thumbnail} video={asset.type === 'video'} />)}
             </div>
         </div>
     )

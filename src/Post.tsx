@@ -1,6 +1,6 @@
 import type { User } from './App.tsx'
 
-export default function Post({ user }: { user: User}) {
+export default function Post({ user, body }: { user: User, body: string}) {
 
     return (
         <div className="bg-neutral-1200 border-neutral-1000 border rounded-2xl flex flex-col p-5 gap-5 w-[323px]">
@@ -13,7 +13,9 @@ export default function Post({ user }: { user: User}) {
                     </div>
                 </div>
             </div>
-            <div></div>
+            <div>
+                {body}
+            </div>
             <div></div>
         </div>
     )

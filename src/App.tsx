@@ -83,7 +83,7 @@ function App() {
     <div className="h-screen bg-neutral-800 p-10">
       <h1 className="text-2xl font-semibold text-white mb-5">Testimonials</h1>
       <div className="flex text-white gap-5">
-        {posts.map((post) => <Post key={post.id} user={post.user} />)}
+        {posts.map((post) => <Post key={post.id} user={post.user} body={post.content} />)}
       </div>
     </div>
   )

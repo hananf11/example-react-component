@@ -1,3 +1,5 @@
+import Post from "./Post"
+
 interface User {
   name: string,
   profile: string
@@ -9,6 +11,7 @@ interface PostAsset {
 }
 
 interface Post {
+  id: number,
   user: User,
   content: string,
   rating: number,
@@ -17,6 +20,7 @@ interface Post {
 
 const posts: Post[] = [
   {
+    id: 1,
     user: {
       name: "Andrew D. Huberman",
       profile: './assets/profiles/e51b17fe66bd1a43cd3641d696b8e57e.png'
@@ -39,6 +43,7 @@ const posts: Post[] = [
     ]
   },
   {
+    id: 2,
     user: {
       name: 'David Goggins',
       profile: './assets/profiles/b7243911db5434081b515415a5e3b387.png'
@@ -48,6 +53,7 @@ const posts: Post[] = [
     assets: []
   },
   {
+    id: 3,
     user: {
       name: 'Tim Ferris',
       profile: './assets/profiles/8eae073e9d7196f0bb767c36c1b2065f.png'
@@ -74,10 +80,10 @@ const posts: Post[] = [
 
 function App() {
   return (
-    <div className="h-screen bg-slate-900 p-10">
-      <h1 className="text-2xl font-semibold text-white">Testimonials</h1>
-      <div className="flex text-white">
-        {posts.map((post) => <><span>{JSON.stringify(post)}</span></>)}
+    <div className="h-screen bg-neutral-800 p-10">
+      <h1 className="text-2xl font-semibold text-white mb-5">Testimonials</h1>
+      <div className="flex text-white gap-5">
+        {posts.map((post) => <Post key={post.id}></Post>)}
       </div>
     </div>
   )

@@ -1,7 +1,8 @@
 function App() {
   return (
-    <div className="flex justify-center items-center h-screen">
-      <span className="text-5xl">Hello, world</span>
+    <div className="h-screen bg-slate-900 p-10">
+      <h1 className="text-2xl font-semibold text-white">Testimonials</h1>
+      <div className="flex"></div>
     </div>
   )
 }

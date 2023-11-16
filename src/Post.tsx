@@ -5,7 +5,7 @@ import Thumbnail from './Thumbnail.tsx'
 export default function Post({ user, body, assets, rating }: { user: User, body: string, assets: PostAsset[], rating: number }) {
 
     return (
-        <div className="bg-neutral-1200 border-neutral-1000 border rounded-2xl flex flex-col p-5 gap-5 w-[323px]">
+        <div className="bg-neutral-1200 border-neutral-1000 border rounded-2xl flex flex-col p-5 gap-5 w-[336px]">
             <div className="flex gap-4 rounded-full font-semibold">
                 <img src={user.profile} className="w-10 h-10" />
                 <div className="flex flex-col gap-1">
@@ -15,7 +15,7 @@ export default function Post({ user, body, assets, rating }: { user: User, body:
                     </div>
                 </div>
             </div>
-            <div>
+            <div className="tracking-tight">
                 {body}
             </div>
             <div className="h-[60px] flex gap-4">

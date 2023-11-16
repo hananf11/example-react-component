@@ -1,8 +1,8 @@
-import type { PostAsset, User } from './App.tsx'
+import type { TestimonialAsset, User } from './App.tsx'
 import StarRating from './StarRating.tsx'
 import Thumbnail from './Thumbnail.tsx'
 
-export default function Post({ user, body, assets, rating }: { user: User, body: string, assets: PostAsset[], rating: number }) {
+export default function Testimonial({ user, body, assets, rating }: { user: User, body: string, assets: TestimonialAsset[], rating: number }) {
 
     return (
         <div className="bg-neutral-1200 border-neutral-1000 border rounded-2xl flex flex-col p-5 gap-5 w-[336px]">

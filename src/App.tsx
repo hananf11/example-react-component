@@ -1,24 +1,24 @@
-import Post from "./Post"
+import Testimonial from "./Testimonial"
 
 export interface User {
   name: string,
   profile: string
 }
 
-export interface PostAsset {
+export interface TestimonialAsset {
   type: 'video' | 'picture',
   thumbnail: string,
 }
 
-interface Post {
+interface Testimonial {
   id: number,
   user: User,
   content: string,
   rating: number,
-  assets: PostAsset[]
+  assets: TestimonialAsset[]
 }
 
-const posts: Post[] = [
+const testimonials: Testimonial[] = [
   {
     id: 1,
     user: {
@@ -83,7 +83,7 @@ function App() {
     <div className="h-screen bg-neutral-800 p-10">
       <h1 className="text-2xl font-semibold text-white mb-5">Testimonials</h1>
       <div className="flex text-white gap-5">
-        {posts.map((post) => <Post key={post.id} user={post.user} body={post.content} assets={post.assets} rating={post.rating} />)}
+        {testimonials.map((testimonial) => <Testimonial key={testimonial.id} user={testimonial.user} body={testimonial.content} assets={testimonial.assets} rating={testimonial.rating} />)}
       </div>
     </div>
   )
